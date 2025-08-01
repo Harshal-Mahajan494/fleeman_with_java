@@ -1,41 +1,53 @@
-package com.example.models;
+package com.example.fleetmanagement.entity;
+
 import jakarta.persistence.*;
+
 @Entity
-@Table(name="Add_on_Details")
-public class AddonDetails {
+public class AddOnDetails {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Short addonId;
+	@Column(name="add_on_id")
+	private Short addOnId;
 	
-	@Column(length=60, unique= true)
-	private String addonName;
+	@Column(name="add_on_name", unique=true, length=60, nullable=false)
+	private String addOnName;
 	
-	private Float addonPrice;
+	@Column(name="add_on_price", nullable=false )
+	private Double addOnPrice;
 
-	/*Getter-Setters*/
-	public Short getAddonId() {
-		return addonId;
+	//Default Constructor - Required for JPA/Hibernate
+	public AddOnDetails() {}
+	
+	//Parameterized Constructor, not necessary
+	public AddOnDetails(String addOnName, Double addOnPrice) {
+		this.addOnName = addOnName;
+		this.addOnPrice = addOnPrice;
+	}
+	
+	//Getters & Setters
+	public Short getAddOnId() {
+		return addOnId;
 	}
 
-	public void setAddonId(Short addonId) {
-		this.addonId = addonId;
+	public void setAddOnId(Short addOnId) {
+		this.addOnId = addOnId;
 	}
 
-	public String getAddonName() {
-		return addonName;
+	public String getAddOnName() {
+		return addOnName;
 	}
 
-	public void setAddonName(String addonName) {
-		this.addonName = addonName;
+	public void setAddOnName(String addOnName) {
+		this.addOnName = addOnName;
 	}
 
-	public Float getAddonPrice() {
-		return addonPrice;
+	public Double getAddOnPrice() {
+		return addOnPrice;
 	}
 
-	public void setAddonPrice(Float addonPrice) {
-		this.addonPrice = addonPrice;
+	public void setAddOnPrice(Double addOnPrice) {
+		this.addOnPrice = addOnPrice;
 	}
-
+	
 }

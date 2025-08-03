@@ -1,4 +1,4 @@
-package com.example.fleetmanagement.entity;
+package com.example.models;
 
 import jakarta.persistence.*;
 

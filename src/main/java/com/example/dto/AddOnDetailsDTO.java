@@ -1,4 +1,4 @@
-package com.example.fleetmanagement.dto;
+package com.example.dto;
 
 public class AddOnDetailsDTO {
 	

@@ -1,4 +1,4 @@
-package com.example.fleetmanagement.controller;
+package com.example.controller;
 
 import java.util.List;
 import java.util.stream.Collectors;

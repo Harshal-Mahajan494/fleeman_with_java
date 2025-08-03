@@ -1,4 +1,4 @@
-package com.example.fleetmanagement.service;
+package com.example.service;
 
 import java.util.List;
 

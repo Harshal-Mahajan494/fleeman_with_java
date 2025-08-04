@@ -20,6 +20,8 @@ public class InvoiceHeaderTable {
 	
 	private Date returnDate;
 	
+	private Date actualReturnDate;
+	
 	@Column(length=60)
 	private String pickupLocation;
 	
@@ -119,6 +121,14 @@ public class InvoiceHeaderTable {
 
 	public void setRentalAmount(Float rentalAmount) {
 		this.rentalAmount = rentalAmount;
+	}
+
+	public Date getActualReturnDate() {
+		return actualReturnDate;
+	}
+
+	public void setActualReturnDate(Date actualReturnDate) {
+		this.actualReturnDate = actualReturnDate;
 	}
 
 }
